@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --config .prettierrc.cjs --write ."
+    "format": "prettier --config .prettierrc.cjs --write . --ignore-unknown",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.1.0",
@@ -16,8 +17,13 @@
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "prettier-plugin-astro": "^0.8.0",
     "prettier-plugin-tailwindcss": "^0.2.4"
+  },
+  "lint-staged": {
+    "**/*": "prettier --config .prettierrc.cjs --write . --ignore-unknown"
   }
 }
