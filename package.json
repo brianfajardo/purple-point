@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --config .prettierrc.cjs --write ."
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.1.0",
