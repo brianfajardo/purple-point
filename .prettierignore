@@ -1,4 +1,7 @@
-# same content as .gitignore
+pnpm-lock.yaml
+public/
+
+# Same content as .gitignore below:
 
 # build output
 dist/
