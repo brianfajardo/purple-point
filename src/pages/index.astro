@@ -1,22 +1,97 @@
 ---
+import "boxicons"
+
 const name = "visitor"
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Home Page</title>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Pacifico&family=Playfair+Display&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <title>Home | Benjamin Nucci</title>
   </head>
 
   <body>
-    <div class="text-center">
-      <h1 class="font-bold">Home</h1>
-      <p>Hello there {name} 👋</p>
-    </div>
+    <header class="flex justify-between p-5">
+      <div class="flex basis-1/4 justify-around">
+        <p class="font-sourceSansPro font-bold">Home</p>
+        <p class="font-sourceSansPro font-bold">Portfolio</p>
+        <p class="font-sourceSansPro font-bold">Active Listings</p>
+        <p class="font-sourceSansPro font-bold">Blog</p>
+      </div>
 
-    <img src="background.jpg" class="h-14 w-14" />
+      <div class="basis-4/4">
+        <box-icon type="logo" name="linkedin"></box-icon>
+        <box-icon type="logo" name="facebook"></box-icon>
+        <box-icon type="logo" name="google"></box-icon>
+        <box-icon type="logo" name="instagram"></box-icon>
+      </div>
+    </header>
+
+    <main class="container mx-auto">
+      <div class="flex flex-col items-center justify-center py-10">
+        <box-icon name="crown"></box-icon>
+        <h1 class="font-pacifico text-5xl underline decoration-red-500">
+          Benjamin Nucci
+        </h1>
+        <h2 class="mt-2 font-juliusSansOne font-bold">
+          Licensed Real Estate Agent
+        </h2>
+      </div>
+
+      <div class="flex">
+        <div class="basis-2/6 text-right">
+          <h1 class="font-playfairDisplay text-2xl font-bold">
+            Professional Services
+          </h1>
+          <p class="font-sourceSansPro">Real Estate</p>
+          <p class="font-sourceSansPro">Property Closing</p>
+          <p class="font-sourceSansPro">Home Improvement</p>
+          <p class="font-sourceSansPro">Entrepreneurship</p>
+        </div>
+
+        <div class="flex basis-2/6 flex-col items-center justify-center">
+          <img src="headshot.jpg" />
+        </div>
+
+        <div class="flex basis-2/6 flex-col justify-around">
+          <div class="basis-2/6">
+            <h1 class="font-playfairDisplay text-2xl font-bold">Biography</h1>
+            <p class="font-sourceSansPro">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+
+          <div>
+            <h1 class="font-playfairDisplay text-2xl font-bold">Contact</h1>
+            <p class="font-sourceSansPro">(555) 555-5555</p>
+            <p class="font-sourceSansPro">ben@email.com</p>
+            <p class="font-sourceSansPro">Montréal, Canada</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="flex justify-center divide-y p-5">
+      <p class="font-sourceSansPro">© 2023 Fajardo | All Rights Reserved.</p>
+    </footer>
   </body>
 </html>
